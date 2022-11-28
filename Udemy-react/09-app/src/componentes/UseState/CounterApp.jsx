@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { CounterAppWithCustomHook } from "./CounterAppWithCustomHook"
 
 export const CounterApp = () => {
     const [{counter1 , counter2, counter3}, setCounter] = useState({
@@ -8,13 +9,7 @@ export const CounterApp = () => {
     })
     return (
         <>
-        
-        <h1>Counter: {counter1}</h1>
-    
-        <button onClick={ () => setCounter({counter1: counter1 + 1})}>+1</button>
-        <button onClick={ () => setCounter({counter1: counter1 - 1})}>-1</button>
-
-        
+        <CounterAppWithCustomHook/>
         </>
   )
 
